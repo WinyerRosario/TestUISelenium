@@ -98,3 +98,7 @@ C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\obj\Debug\TestUISelenium.cs
 C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\obj\Debug\TestUISelenium.csproj.CopyComplete
 C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\obj\Debug\TestUISelenium.dll
 C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\obj\Debug\TestUISelenium.pdb
+C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\bin\Debug\nunit.framework.dll
+C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\bin\Debug\nunit.framework.legacy.dll
+C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\bin\Debug\nunit.framework.xml
+C:\Users\winye\Desktop\TestUISelenium\TestUISelenium\bin\Debug\nunit.framework.legacy.xml

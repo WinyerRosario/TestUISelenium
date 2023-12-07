@@ -8,7 +8,7 @@ namespace TestUISelenium.Tests
     [TestClass]
     public class RegisterTest  : BaseClass
     {
-        String email = "jmartinn7523001@gmail.com";
+        String email = "jmartinn752316211@gmail.com";
         public HomePage homePage;
         public RegisterPage registerPage;
         [TestCategory("Smoke")]

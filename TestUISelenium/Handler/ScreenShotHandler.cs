@@ -1,11 +1,8 @@
 ﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestUISelenium.Handler
 {
@@ -13,13 +10,20 @@ namespace TestUISelenium.Handler
     {
         private static string DirectoryPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-        public static string TakeScreenshot(IWebDriver driver) 
+        public static string TakeScreenshot(IWebDriver driver)
         {
             long milliseconds = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
-            string imagePath = DirectoryPath + " //img " + milliseconds + ".png";
+            string imagePath = Path.Combine(DirectoryPath, "img" + milliseconds + ".png");
             Screenshot image = ((ITakesScreenshot)driver).GetScreenshot();
-            //image.SaveAsFile(imagePath, ScreenshotImageFormat.Png);
+
+            using (MemoryStream memoryStream = new MemoryStream(image.AsByteArray))
+            {
+                using (Bitmap bitmap = new Bitmap(memoryStream))
+                {
+                    bitmap.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png);
+                }
+            }
 
             return imagePath;
         }

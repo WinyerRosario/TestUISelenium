@@ -10,7 +10,7 @@ namespace TestUISelenium
     [TestClass]
     public class SampleTest
     {
-        String email = "Carlospaul394920@gmail.com";
+        String email = "Carlospaul93100920@gmail.com";
         IWebDriver driver;
 
         [TestInitialize]
@@ -63,7 +63,8 @@ namespace TestUISelenium
                 Console.WriteLine(e.Message);
             }
         }
-            [TestCleanup]
+
+        [TestCleanup]
             public void CloseBrowser()
         {
             driver.Close();
